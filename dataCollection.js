@@ -9,3 +9,15 @@ for(let i = 0; i < row.length; i++){
 }
 
 console.log(row)
+
+// Turn array into objects
+const header = row[0]
+objArray = []
+for(let i = 1; i < row.length; i++){
+    let obj = {}
+    for(let headerElement = 0; headerElement < row[0].length; headerElement++){
+        obj[header[headerElement].toLowerCase()] = row[i][headerElement]
+    }
+    objArray.push(obj)
+}
+console.log(objArray)
