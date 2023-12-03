@@ -21,3 +21,27 @@ for(let i = 1; i < row.length; i++){
     objArray.push(obj)
 }
 console.log(objArray)
+
+// Remove the last element from the sorted array
+objArray.pop()
+console.log(objArray)
+
+// Insert the following object at index 1:
+objArray.splice(1,0, {id: "48", name: "Barry", occupation: "Runner", age: "25"})
+console.log(objArray)
+
+// Add the following object to the end of the array:
+objArray.push({id: "7", name: "Bilbo", occupation: "None", age: "111"})
+console.log(objArray)
+
+console.log(Number(objArray[0].age))
+
+// Use the values of each object in the array to calculate the average age of the group
+let ageSum = 0
+
+for(let j = 0; j < objArray.length; j++){
+    ageSum = Number(objArray[j].age) + ageSum
+}
+
+let averageAge = ageSum / objArray.length
+console.log(averageAge)
